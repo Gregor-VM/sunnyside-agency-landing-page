@@ -5,7 +5,7 @@
     --dark-desaturated-cyan: #2C7566;
     --dark-blue: hsl(198, 62%, 26%);
     /*--dark-moderate-cyan: hsl(168, 34%, 41%);*/
-    --dark-moderate-cyan: hsl(168, 35%, 56%);
+    --dark-moderate-cyan: hsl(160, 31%, 68%);
     --light-blue: rgb(96, 113, 129);
 }
 
@@ -29,6 +29,10 @@ body {
 
 .show{
     display: block !important;
+}
+
+.change_opacity{
+    opacity: 1 !important;
 }
 
 
@@ -93,12 +97,18 @@ nav {
 }
 
 .nav_links li:last-child a{
+    font-weight: bold;
     padding: 1rem 1.5rem;
     font-size: 16px;
     text-transform: uppercase;
     border-radius: 5rem;
     background-color: var(--yellow);
     color: black;
+}
+
+.nav_links li:last-child a:hover{
+    background-color: rgba(255,255,255,.4);
+    color: white;
 }
 
 
@@ -108,8 +118,23 @@ main{
     grid-template-columns: 1fr;
 }
 
+/*
 main > img {
     width: 100%;
+}*/
+
+main > picture{
+    width: 100%;
+    height: 312px;
+    background-size: cover;
+}
+
+main > .transform{
+    background-image: url(../images/mobile/image-transform.jpg);
+}
+
+main > .stand_out {
+    background-image: url(../images/mobile/image-stand-out.jpg);
 }
 
 main > div {
@@ -190,6 +215,14 @@ main > div > a {
     text-align: center;
 }
 
+.container{
+    margin-bottom: 5rem;
+}
+
+.container article{
+    margin: 1rem;
+}
+
 .testimonials article > * {
     margin: 1rem 0;
 }
@@ -223,7 +256,30 @@ main > div > a {
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
 }
+
+.gallery > picture{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery > .milkbottles{
+    background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+}
+
+.gallery > .orange {
+    background-image: url(../images/mobile/image-gallery-orange.jpg);
+}
+
+.gallery > .cone {
+    background-image: url(../images/mobile/image-gallery-cone.jpg);
+}
+
+.gallery > .sugar_cubes{
+    background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+}
+
 
 .gallery img {
     width: 100%;
@@ -256,10 +312,178 @@ footer > ul > li > a {
     color: var(--dark-desaturated-cyan);
 }
 
+footer > ul > li:nth-child(2) a:hover{
+    color: white;
+}
+
 .socials img {
     padding: .5rem;
 }
 
 .socials{
     padding-bottom: 5rem;
+}
+
+.socials a:nth-child(3) img{
+    fill: #fff;
+}
+
+@media (min-width: 460px) {
+    header{
+        height: 700px;
+    }
+}
+
+@media (min-width: 580px) {
+    header{
+        height: 900px;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+    header{
+        background-image: url(../images/desktop/image-header.jpg);
+        height: 85vh;
+    }
+
+    header > h1 {
+        margin-top: 5rem;
+    }
+
+    header > .arrow_down {
+        margin-top: 7rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menu-container{
+        display: block;
+        width: unset;
+        background-color: transparent;
+        position: unset;
+        margin: 0;
+        border: 0;
+        top: auto;
+        left: auto;
+    }
+
+    nav > img:first-child{
+        width: 10%;
+    }
+
+    .nav_links {
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_links > li > a{
+        font-weight: lighter;
+        color: white;
+    }
+
+    .nav_links > li:last-child a{
+        background-color: white;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    main > div:nth-child(2){
+        order: -1;
+    }
+
+    main > div:not(.graphic_design, .photography) {
+        display: flex;
+        align-items: flex-start;
+        text-align: start;
+        width: 68%;
+    }
+
+    .underline{
+        transform: translate(-8px, -8px);
+    }
+
+    main > picture {
+        height: 624px;
+    }
+
+    main > .transform{
+        background-image: url(../images/desktop/image-transform.jpg);
+    }
+    
+    main > .stand_out {
+        background-image: url(../images/desktop/image-stand-out.jpg);
+    }
+
+    .graphic_design {
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+    }
+
+    .photography{
+        background-image: url(../images/desktop/image-photography.jpg);
+    }
+
+    main > .graphic_design > p,  main > .photography > p,
+    main > .graphic_design > h1,  main > .photography > h1 {
+        width: 50%;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .testimonials {
+        margin: 10rem 7rem;
+    }
+
+    .container article img{
+        width: 20%;
+    }
+
+    .container article p{
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .gallery > .milkbottles{
+        background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+    }
+    
+    .gallery > .orange {
+        background-image: url(../images/desktop/image-gallery-orange.jpg);
+    }
+    
+    .gallery > .cone {
+        background-image: url(../images/desktop/image-gallery-cone.jpg);
+    }
+    
+    .gallery > .sugar_cubes{
+        background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 447px;
+    }
+
+    footer > img{
+        width: 15%;
+    }
+
+    footer > ul li{
+        margin: 0 1rem;
+        margin-bottom: 0.5rem;
+    }
+
 }
