@@ -1,0 +1,265 @@
+:root{
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    /*--dark-desaturated-cyan: hsl(167, 40%, 24%);*/
+    --dark-desaturated-cyan: #2C7566;
+    --dark-blue: hsl(198, 62%, 26%);
+    /*--dark-moderate-cyan: hsl(168, 34%, 41%);*/
+    --dark-moderate-cyan: hsl(168, 35%, 56%);
+    --light-blue: rgb(96, 113, 129);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    font-size: 18px;
+}
+
+.show{
+    display: block !important;
+}
+
+
+header{
+    background-image: url(../images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+    margin-top: 2rem;
+}
+
+header > .arrow_down {
+    margin-top: 2rem;
+}
+
+nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links{
+    background-color: white;
+    padding: 1.5rem;
+    padding-right: 0;
+    /* To avoid see pixels of the background image */
+    transform: translate(1px, 1px);
+    
+}
+
+.menu_container{
+    display: none;
+    width: 85%;
+    background-color: transparent;
+    position: absolute;
+    top: 6rem;
+    left: 8%;
+    margin-right: 1.5rem;
+    border: 1.5rem solid white;
+    border-top: 1.5rem solid transparent;
+    border-left: 0rem solid transparent;
+}
+
+.nav_links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_links a{
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+.nav_links li:last-child a{
+    padding: 1rem 1.5rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    background-color: var(--yellow);
+    color: black;
+}
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main > img {
+    width: 100%;
+}
+
+main > div {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > div > * {
+    margin: 1rem 0;
+}
+
+main > div > h1 {
+    color: var(--dark-blue);
+}
+
+main > div > p {
+    color: var(--light-blue);
+}
+
+main > div > a {
+    width: max-content;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+}
+
+.bg_yellow{
+    background-color: var(--yellow);
+}
+
+.bg_red {
+    background-color: var(--soft-red);
+}
+
+.underline{
+    position: relative;
+    display: block;
+    padding: 0 70px;
+    opacity: .5;
+    height: 10px;
+    border-radius: 15px;
+    width: 100%;
+    transform: translate(0px, -8px);
+    z-index: -10;
+    color: transparent;
+}
+
+.graphic_design{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(../images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+.graphic_design > p, .graphic_design > h1 {
+    color: var(--dark-desaturated-cyan);
+}
+
+.photography{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(../images/mobile/image-photography.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+.photography > p, .photography > h1 {
+    color: var(--dark-blue);
+}
+
+.testimonials{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.testimonials article > * {
+    margin: 1rem 0;
+}
+
+.testimonials > h4{
+    text-transform: uppercase;
+    color: var(--light-blue);
+}
+
+.testimonials article img {
+    margin-top: 4rem;
+    border-radius: 50%;
+    width: 25%;
+}
+
+.testimonials article p {
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.testimonials article > div > h4 {
+    color: var(--dark-blue);
+    margin-bottom: .5rem;
+}
+
+.testimonials article > div > small {
+    color: var(--light-blue);
+    opacity: .8;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+footer {
+    color: var(--dark-desaturated-cyan);
+    background-color: var(--dark-moderate-cyan);
+    clear: both;
+    text-align: center;
+}
+
+footer > * {
+    margin-top: 4rem;
+}
+
+footer > img {
+    width: 50%;
+}
+
+footer > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer > ul > li > a {
+    font-size: 20px;
+    padding: 1rem;
+    color: var(--dark-desaturated-cyan);
+}
+
+.socials img {
+    padding: .5rem;
+}
+
+.socials{
+    padding-bottom: 5rem;
+}
